@@ -7,6 +7,7 @@ try:
     from .isatab_meta import *
     from .isatab_full import *
 except ImportError as e:
+    logging.warning()
     logging.getLogger(__name__).warn("Missing module")
     logging.getLogger(__name__).warn(str(e))
     logging.getLogger(__name__).warn("Some ISA-tools functionality will not be loaded")
